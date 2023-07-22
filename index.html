@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.svg">
+    <link rel="stylesheet" href="css/style.css" />
+    <title>PRAVIN</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+    <style>
+        .proj-img {
+            transition: ease-in-out 5s;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer base {t .scrollbar { scrollbar-width: thin; scrollbar-color: #000 #fff; } /* For Chrome, EDGE, Opera, Others */ .scrollbar::-webkit-scrollbar { width: 1px; display: none; } .scrollbar::-webkit-scrollbar-track { background: #fff; } .scrollbar::-webkit-scrollbar-thumb
+         {@apply bg-gray-400; } } @layer components { .card {@apply bg-slate-50/50 p-2 m-2 shadow-md rounded hover:bg-slate-50 hover:text-blue-600; } .contact-link{ box-shadow: 0px 0px 47px 2px rgba(255, 255, 255, 0.25); } .primary-text-grad { @apply
+        bg-gradient-to-r from-[#FF6A00] to-[#EE0979] text-transparent bg-clip-text; } .grad-border{ border-image-source: linear-gradient(to left, #743ad5, #d53a9d); } .question { background: linear-gradient( 91.02deg, rgba(217, 217, 217, 0.51) -1.11%,
+        rgba(217, 217, 217, 0.301764) 42.69%, rgba(217, 217, 217, 0.15249) 74.26%, rgba(217, 217, 217, 0.51) 97.65% ); backdrop-filter: blur(20px); /* Note: backdrop-filter has minimal browser support */ padding: 10px; border-radius: 10px; } .testimonial-block{
+        background: #FFFFFF; border: 1.5px solid rgba(217, 217, 217, 0.66); box-shadow: 0px 4px 87px 43px rgba(0, 0, 0, 0.04); border-radius: 5px; } .numbers-div{ background: #FFFFFF; box-shadow: 0px 1px 28px 1px rgba(0, 0, 0, 0.16); } .test{ box-shadow:
+        0px 0px 13px 4px rgba(0, 0, 0, 0.25); } .nextSlide , .prevSlide { position: absolute; display: inline-block !important; bottom: -45px; margin: 10px; background: #000000; color: white; font-size: 20px; } .nextSlide{ right: 40px; padding-left: 10px;
+        padding-right: 10px; border-radius: 0 50% 50% 0 ; } .prevSlide{ right: 83px; padding-right: 10px; padding-left: 10px; border-radius: 50% 0 0 50% ; } .lower-footer{ background: linear-gradient(90deg, #020202 23.96%, #282F47 49.8%, #171617 80.21%);
+        } .accordion { background-color: rgba(38, 38, 38, 0.706); transition: all .3s ease-in; } .active-accordion{ } .active-tab-li{ @apply bg-gradient-to-r from-[#FF6A00] to-[#EE0979] } .active-tab-li a{ @apply bg-black text-white } @media only screen
+        and (max-width: 768px) { .nav-menu { position: fixed; padding: 5px; left: -100%; top: 4.3rem; flex-direction: column; background-color: #000000; color: white; width: 50%; height: 100%; border-radius: 10px; text-align: center; transition: 0.7s;
+        animation: ease-in-; box-shadow: 0 10px 20px rgb(0 0 0 / 15%); @apply divide-y-2 divide-[#2e2e2ec7] border-r-2 border-white } .nav-menu > li {@apply my-5 pt-2; } .nav-menu.active { left: 0; } } }
+
+    </style>
+
+</head>
+
+<body class="font-poppins">
+    <header class="sticky top-0 z-30">
+        <div class="nav bg-black text-white flex justify-between h-16 leading-[30px] w-full items-center pl-6 absolute">
+
+            <ul class="nav-menu md:mx-3 p-3 items-center text-lg fixed  md:absolute md:right-4  md:flex">
+                <li class="mx-6 font-medium hover:primary-text-grad"><a href="">Home</a></li>
+                <li class="mx-6 font-medium hover:primary-text-grad"><a href="">Services</a></li>
+                <li class="mx-6 font-medium hover:primary-text-grad"><a href="">Blog</a></li>
+                <!-- <li><a class="bg-gradient-to-r from-[#FF6A00] to-[#EE0979] mx-2 my-1 py-1 px-3 font-semibold">
+                    Start A Project
+                </a></li> -->
+            </ul>
+            <!-- <input type="checkbox" hidden id="meu-btn"> -->
+            <label for="meu-btn" class=" menu-btn-lable text-3xl mr-4 p-4 md:before:hidden md:hidden">
+                <i class='bx text-white bx-menu-alt-right'></i>
+                <i class='bx bx-x hidden'></i>
+            </label>
+
+    </header>
+    <section class="w-full bg-black text-white flex mx-auto justify-center flex-col m-0 p-5 pb-24 md:pb-5">
+        <img src="assets/img/hello.svg" alt="" class="max-h-[283px]">
+        <h1 class="text-center font-[400] text-2xl md:text-[33px] md:leading-[52.5px]">
+            Introduction To <span class="primary-text-grad">My Self</span>
+        </h1>
+        <div class="flex justify-center mx-auto mt-9 -mb-48 max-w-[993px] p-1 md:p-2 rounded bg-gradient-to-r from-[#FF6A00] to-[#EE0979]">
+            <img src="assets/img/pravin2.jpg" alt="" class="rounded-md">
+        </div>
+
+    </section>
+    <!-- services block  -->
+    <section class="mt-28 md:mt-56">
+        <div class="wrapper max-w-[1200px] mx-auto">
+
+            <div class="flex flex-col md:flex-row gap-5 md:gap-0 p-3 justify-between items-center md:pr-4 text-justify md:text-left">
+                <h2 class="text-center md:text-left text-2xl md:text-[60px] md:leading-[65px] text-black"><span class="primary-text-grad">Product Designer and </span>Devloper</h2>
+                <p class="text-[#828282] max-w-[538px]  text-base">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem eum enim veritatis vel sunt qui ab porro minima dolore, praesentium cupiditate incidunt, nam doloremque sint aliquid quod unde, voluptatem recusandae?</p>
+            </div>
+            <ul class="service-ul text-sm ml-3 flex gap-3 mb-6 mt-3 md:mt-10 flex-wrap">
+                <li class="rounded-full px-1 py-3 active-tab-li" data-active="true"><a class="border border-black px-4 py-2 rounded-full hover:bg-black hover:text-white" href="javascript:void(0);">Web
+                        Development</a></li>
+                <li class="rounded-full px-1 py-3" data-active="false"><a class="border border-black px-4 py-2 rounded-full hover:bg-black hover:text-white " href="javascript:void(0);">HTML</a></li>
+                <li class="rounded-full px-1 py-3" data-active="false"><a class="border border-black px-4 py-2 rounded-full hover:bg-black hover:text-white " href="javascript:void(0);">JAVASCRIPT</a></li>
+                <li class="rounded-full px-1 py-3" data-active="false"><a class="border border-black px-4 py-2 rounded-full hover:bg-black hover:text-white " href="javascript:void(0);">C++</a></li>
+            </ul>
+            <div class="serviceDetails transition-all duration-500">
+                <div class="flex md:h-[493px] flex-col md:flex-row w-full bg-[#111727] my-6 rounded ">
+                    <div class="left m-3 md:mt-[60px] md:ml-[40px] basis-1/2">
+                        <h4 class="text-2xl text-[#FBFBFB] leading-10 font-[500]"> ABOUT  WEB  DESIGNING & DEVELOPMENT </h4>
+                        <p class="text-white opacity-60 text-base md:text-xl text-justify md:text-left md:leading-[30px] mt-[30px] mb-[40px]">
+                            Web development refers in general to the tasks associated with developing websites for hosting via intranet or internet. The web development process includes web design, web content development, 
+                            client-side/server-side scripting and network security configuration, among other tasks.</p>
+                        <ul class="flex gap-3 md:gap-[34px] text-sm md:text-[18px] <sm:mb-4></sm:mb-4>">
+                            <li class="contact-link text-white rounded bg-gradient-to-r from-[#FF6A00] to-[#EE0979] text-center px-5 py-1">
+                                <a class="" href="">Contact Us</a>
+                            </li>
+                            <li class="text-white  text-center px- py-1"><a class="px-3" href="">Learn More</a></li>
+                        </ul>
+                    </div>
+                    <div class="right flex mx-auto justify-center items-center">
+                    <img class=" md:w-[593px] md:h-[469px] h-[200px] bg-cover mt-6 mb-0" src="assets/img/webdesign.jpg">
+                    </div>
+                </div>
+                <div class="hidden md:h-[493px] flex-col md:flex-row w-full bg-[#111727] my-6 rounded">
+                    <div class="left m-3 md:mt-[60px] md:ml-[40px] basis-1/2">
+                        <h4 class="text-2xl text-[#FBFBFB] leading-10 font-[500]"> ABOUT A HTML </h4>
+                        <p class="text-white opacity-60 text-base md:text-xl text-justify md:text-left md:leading-[30px] mt-[30px] mb-[40px]">
+                            HTML stands for Hyper Text Markup Language
+                            HTML is the standard markup language for creating Web pages
+                            HTML describes the structure of a Web page
+                            HTML consists of a series of elements
+                            HTML elements tell the browser how to display the content
+                            HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.
+</p>
+                        <ul class="flex gap-3 md:gap-[34px] text-sm md:text-[18px] <sm:mb-4></sm:mb-4>">
+                            <li class="contact-link text-white rounded bg-gradient-to-r from-[#FF6A00] to-[#EE0979] text-center px-5 py-1">
+                                <a class="" href="">Contact Us</a>
+                            </li>
+                            <li class="text-white  text-center px- py-1"><a class="px-3" href="">Learn More</a></li>
+                        </ul>
+                    </div>
+                    <div class="right  flex mx-auto justify-center items-center">
+
+                        <img class=" md:w-[593px] md:h-[469px] h-[200px] bg-cover mt-6 mb-0" src="assets/img/html.jpg">
+                    </div>
+                </div>
+                <div class="hidden md:h-[493px] flex-col md:flex-row w-full bg-[#111727] my-6 rounded">
+                    <div class="left m-3 md:mt-[60px] md:ml-[40px] basis-1/2">
+                        <h4 class="text-2xl text-[#FBFBFB] leading-10 font-[500]">ABOUT A  JAVASCRIPT</h4>
+                        <p class="text-white opacity-60 text-base md:text-xl text-justify md:text-left md:leading-[30px] mt-[30px] mb-[40px]">
+                            JavaScript is a scripting or programming language that allows you to implement complex features on web pages — every time a web page does more than just sit there and display static 
+                            information for you to look at — displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc</p>
+                        <ul class="flex gap-3 md:gap-[34px] text-sm md:text-[18px] <sm:mb-4></sm:mb-4>">
+                            <li class="contact-link text-white rounded bg-gradient-to-r from-[#FF6A00] to-[#EE0979] text-center px-5 py-1">
+                                <a class="" href="">Contact Us</a>
+                            </li>
+                            <li class="text-white  text-center px- py-1"><a class="px-3" href="">Learn More</a></li>
+                        </ul>
+                    </div>
+                    <div class="right  flex mx-auto justify-center items-center">
+
+                        <img class=" md:w-[593px] md:h-[469px] h-[200px] bg-cover mt-6 mb-0" src="assets/img/java.jpg">
+                    </div>
+                </div>
+                <div class="hidden md:h-[493px] flex-col md:flex-row w-full bg-[#111727] my-6 rounded">
+                    <div class="left m-3 md:mt-[60px] md:ml-[40px] basis-1/2">
+                        <h4 class="text-2xl text-[#FBFBFB] leading-10 font-[500]"> ABOUT A C++</h4>
+                        <p class="text-white opacity-60 text-base md:text-xl text-justify md:text-left md:leading-[30px] mt-[30px] mb-[40px]">
+                            C++ is an object-oriented programming language which gives a clear structure to programs and allows code to be reused, lowering development costs.
+                             C++ is portable and can be used to develop applications that can be adapted to multiple platforms. C++ is fun and easy to learn!</p>
+                        <ul class="flex gap-3 md:gap-[34px] text-sm md:text-[18px] <sm:mb-4></sm:mb-4>">
+                            <li class="contact-link text-white rounded bg-gradient-to-r from-[#FF6A00] to-[#EE0979] text-center px-5 py-1">
+                                <a class="" href="">Contact Us</a>
+                            </li>
+                            <li class="text-white  text-center px- py-1"><a class="px-3" href="">Learn More</a></li>
+                        </ul>
+                    </div>
+                    <div class="right  flex mx-auto justify-center items-center">
+
+                        <img class=" md:w-[593px] md:h-[469px] h-[200px] bg-cover mt-6 mb-0" src="assets/img/c++.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About section  -->
+    <section id="about" class="w-full mt-5  p-5 mx-auto max-w-[1285px]">
+        <div class="max-w-full">
+            <h2 class=" text-center font-[500]  text-2xl md:text-[60px] md:leading-[65px] mt-9">
+                Little <span class="primary-text-grad">About Me</span>
+            </h2>
+            <div class="other-content md:my-9 flex flex-col xl:flex-row justify-between items-center">
+                <img src="assets/img/black1.jpg" class="md:float-left aspect-video md:max-w-[449px] md:h-[519px] m-6 xl:sticky top-3" alt="" />
+                <div class="w-full md:max-w-[540px]">
+
+                    <p class="md:p-6 text-justify text-[16px] ">
+                       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque, at. Dolor debitis reprehenderit veniam voluptatibus consectetur ratione voluptas molestias excepturi ducimus distinctio. Odio, illum possimus! Quod impedit eaque est nesciunt cum officia provident corrupti sit.<br><br>
+                        ipsum dolor sit amet consectetur adipisicing elit. Fuga sit, unde facilis natus numquam dignissimos odio harum dolorum ratione commodi culpa inventore incidunt voluptatum suscipit. Praesentium harum mollitia placeat facilis.
+
+                    </p>
+                    <div class="w-full divide-y-2 md:divide-y-0  md:divide-x-2 divide-[#A3A3A3] flex md:flex-row flex-col gap-2 numbers-div px-4 py-8 md:py-1 mt-6 justify-center items-center rounded-md md:rounded-none">
+                        <div class="p-2 md:p-6 primary-text-grad text-3xl md:text-4xl text-center leading-4">15+ <br>
+                            <span class="pt-3 inline-block text-black text-base">Clients Served</span>
+                        </div>
+                        <div class="p-2 md:p-6 primary-text-grad text-3xl md:text-4xl text-center leading-4">13 <br>
+                            <span class="pt-3 inline-block text-black text-base">Years of Experince</span>
+                        </div>
+                        <div class="p-2 md:p-6 primary-text-grad text-3xl md:text-4xl text-center leading-4">9+ <br>
+                            <span class="pt-3 inline-block text-black text-base">Satisfied clients</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- projects  -->
+    <section id="Blog" class="mt-10">
+        <div class="flex flex-col xl:flex-row justify-between items-start xl:divide-x-2 divide-gray-400 max-w-[1200px] mx-auto">
+            <div class=" md:m-20 basis-1/2 sticky top-12">
+                <h2 class="text-black text-2xl text-center md:text-[60px] mt-9 md:mt-3md: md:leading-[65px]">Completed
+                    <br><span class="primary-text-grad">Projects</span>
+                </h2>
+                <p class="text-base text-[#828282] md:mt-[69px] p-3 text-justify md:text-left md:p-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita dignissimos porro quaerat alias aspernatur, aliquam eaque quae tempora, ipsam autem, eveniet architecto vero repellendus deleniti sint minima et? Sequi, repellat!</p>
+            </div>
+            <div class="flex  flex-col gap-7 max-w-[650px] basis-1/2 mx-auto justify-center items-center text-center relative">
+                <div class="project w-[90%]  flex mx-auto flex-col justify-center items-center">
+                    <div class="proj-img w-[100%] md:w-[350px] h-80 md:h-[500px] bg-cover bg-top  hover:bg-bottom rounded-md" style="background-image: url(assets/img/astrosonic.png)"></div>
+                    <h4 class="text-black p-2  md:m-4 max-w-[340px] text-center"> - Our First Beloved Client [ projectreport.co.in ]</h4>
+                </div>
+            </div>
+    </section>
+    <!-- -- testimonials  --  -->
+    <section class="w-full testimonials my-[3rem] ">
+        <h2 class="mb-20 primary-text-grad text-center font-[500]  text-2xl xl:text-[60px] mt-9 xl:leading-[90px]">
+            Recent Reviews
+        </h2>
+        <div class=" flex gap-9 max-w-[1200px] justify-center items-center mx-auto p-4 flex-col lg:flex-row ">
+            <div class="testimonial-block  mb-12 sm:w-[400px]">
+
+                <div class="image">
+                    <img src="assets/img/short.jpg" alt="" class="-mt-[40px] ml-7 rounded-full h-[107px] w-[107px] border-4 border-[#FF6A00] border-solid border-spacing-4 p-1">
+                </div>
+                <div class="divide-y-2 flex flex-col justify-between items-stretch mb-0 mt-2">
+
+                    <div class="testi text-sm mx-6 my-10 h-[200px]">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae corrupti corporis minus ipsam suscipit. Enim aliquid nisi ipsam placeat, nihil at corporis saepe dicta deserunt aperiam dolorem laborum? Distinctio, nisi!.</p>
+                    </div>
+                    <div class="info-detail flex justify-between items-center mx-6 py-6">
+                        <p><span class="text-sm text-black ">Don Joe</span><br>
+                            <span class="text-xs text-[#8F8F8F] ">Lorem, ipsum.</span>
+                        </p>
+                        <div class="stars text-yellow-400 text-center text-xl">
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-block mb-12 sm:w-[400px] ">
+
+                <div class="image">
+                    <img src="assets/img/short.jpg" alt="" class="-mt-[40px] ml-7 rounded-full h-[107px] w-[107px] border-4 border-[#FF6A00] border-solid border-spacing-4 p-1">
+                </div>
+                <div class="divide-y-2 flex flex-col justify-between items-stretch mb-0 mt-2">
+
+                    <div class="testi text-sm mx-6 my-10 h-[200px]">
+                        <p>Throughout the entire process, pravin was highly responsive and communicative, keeping us informed and involved every step of the way.If you're looking for a talented and dedicated web designer who can help you take your online
+                            presence to the next level, I highly recommend Pravin.</p>
+                    </div>
+                    <div class="info-detail flex justify-between items-center mx-6 py-6">
+                        <p><span class="text-sm text-black ">Don Joe</span><br>
+                            <span class="text-xs text-[#8F8F8F] ">Lorem, ipsum.</span>
+                        </p>
+                        <div class="stars text-yellow-400 text-center text-xl">
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-block mb-12 sm:w-[400px]  ">
+
+                <div class="image">
+                    <img src="assets/img/short.jpg" alt="" class="-mt-[40px] ml-7 rounded-full  h-[107px] w-[107px] border-4 border-[#FF6A00] border-solid border-spacing-4 p-1">
+                </div>
+                <div class="divide-y-2 flex flex-col justify-between items-stretch mb-0 mt-2">
+
+                    <div class="testi text-sm mx-6 my-10 h-[200px]">
+                        <p>Pravin really understood our business and customers, and made a website that looks amazing and gets results. The website clearly shows our real estate services, like flats and apartments, and has helped us get more leads and customers.</p>
+                    </div>
+                    <div class="info-detail flex justify-between items-center mx-6 py-6">
+                        <p><span class="text-sm text-black ">Don Joe</span><br>
+                            <span class="text-xs text-[#8F8F8F] ">Lorem, ipsum.</span>
+                        </p>
+                        <div class="stars text-yellow-400 text-center text-xl">
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- -- contact details --  -->
+    <section>
+        <div class="wrapper  max-w-[1100px] flex flex-col mx-auto pt-[110px] mb-11 p-4">
+            <h2 class="text-3xl md:text-[60px] mb-5 text-left md:leading-[90px]">Love To Hear From You <br>
+                <span class="primary-text-grad">Get In Touch </span>👋
+            </h2>
+            <form action="/contact" method="POST">
+                <div class="flex flex-col md:flex-row w-full gap-7 md:gap-[67px] mb-7">
+                    <div class="inner basis-1/2"><label for="">Your Name</label>
+                        <input type="text" name="Name" id="" class="mt-2 h-[42px] w-full bg-[#FAFAFA] border border-[#EDEDED] rounded outline-0 p-2">
+                    </div>
+                    <div class="inner basis-1/2"><label for="">Your Email</label>
+                        <input type="email" name="Name" id="" class="mt-2 h-[42px] w-full bg-[#FAFAFA] border border-[#EDEDED] rounded outline-0 p-2">
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row w-full gap-7 md:gap-[67px] mb-7">
+                    <div class="inner basis-1/2"><label for="">What you are interested in ?</label>
+                        <select name="budget" id="cars" class="mt-2 h-[42px] w-full bg-[#FAFAFA] border border-[#EDEDED] rounded outline-0 p-2">
+                            <option value="Web Design">Web Design</option>
+                            <option value="HTML">HTML</option>
+                            <option value="JAVASCRIPT">JAVASCRIPT</option>
+                            <option value="C++">C++</option>
+                            <option value="other">other</option>
+                        </select>
+                    </div>
+                    
+                </div>
+                <div class="flex w-full mb-7">
+                    <div class="inner w-full">
+                        <label for="">Message</label> <br>
+                        <textarea id="w3review" class="mt-2 h-[164px] w-full bg-[#FAFAFA] border border-[#EDEDED] rounded outline-0 block p-2" name="message"></textarea>
+                    </div>
+                </div>
+                <input type="submit" value="Just Send &nbsp&nbsp 📤" class="flex items-center h-[44px]  text-white px-6 rounded bg-gradient-to-r from-[#FF6A00] to-[#EE0979] hover:bg-none hover:text-black hover:border hover:border-black">
+            </form>
+        </div>
+        <h2 class="text-center primary-text-grad text-3xl md:text-[60px] mt-9 md:leading-[90px]">Got a project ?. <br>Let's talk</h2>
+        <div class="accordions text-white flex flex-col gap-4 items-center justify-center mt-[64px] pb-[79px] mx-4">
+                <div class="accordion active-accordion max-w-[1017px] mx-auto p-5 border border-[#d9d9d9aa] rounded w-full">
+                    <header class="h-[30px] flex items-center justify-between text-base md:text-xl cursor-pointer">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, voluptas.?
+                        <span> + </span>
+                    </header>
+                    <p class="description mt-4 text-sm md:text-lg  pt-5 opacity-60">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit amet minima reiciendis mollitia, blanditiis alias totam nesciunt veniam consequatur repellendus? Nisi quos ipsum voluptates atque accusantium id illo beatae aliquam!
+                    </p>
+                </div>
+                <div class="accordion active-accordion max-w-[1017px] mx-auto p-5 border border-[#d9d9d9aa] rounded w-full">
+                    <header class="h-[30px] flex items-center justify-between text-base md:text-xl cursor-pointer">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, modi.?
+                        <span> + </span>
+                    </header>
+                    <p class="description hidden text-sm md:text-lg  pt-5 opacity-60">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque deserunt numquam, velit optio nulla autem inventore odit sint debitis tenetur! Doloribus voluptatem sapiente natus perferendis laboriosam laborum adipisci quod odit?  </p>
+                </div>
+                <div class="accordion active-accordion max-w-[1017px] mx-auto p-5 border border-[#d9d9d9aa] rounded w-full">
+                    <header class="h-[30px] flex items-center justify-between text-base md:text-xl cursor-pointer">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, nisi.?
+                        <span> + </span>
+                    </header>
+                    <p class="description hidden text-sm md:text-lg  pt-5 opacity-60">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi eum quisquam iusto vitae, minima corrupti quos, qui sequi ullam, exercitationem iure eius. Dolore reiciendis, vero vitae nisi explicabo reprehenderit nostrum!
+                </p></div>
+                <div class="accordion active-accordion max-w-[1017px] mx-auto p-5 border border-[#d9d9d9aa] rounded w-full">
+                    <header class="h-[30px] flex items-center justify-between text-base md:text-xl cursor-pointer">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, tenetur.?
+                        <span> + </span>
+                    </header>
+                    <p class="description hidden text-sm md:text-lg  pt-5 opacity-60">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis aliquid esse voluptates consequuntur maxime ex sapiente illum consequatur exercitationem, cum atque odio, deleniti quam reprehenderit inventore placeat quaerat molestias fugit.
+                    </p>
+                </div>
+              
+            </div>
+    </section>
+
+    <!-- -- footer --  -->
+    <footer class="flex flex-col  bg-black pt-9">
+        <div class="lower-footer  w-full text-white   p-2 text-center">Pravin katale:-pravinkatale2295.com </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
